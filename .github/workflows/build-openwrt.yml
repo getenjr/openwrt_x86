@@ -17,9 +17,9 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'false'
+        default: true
   schedule:
-   - cron: 30 9 * * *
+    - cron: 30 9 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -37,7 +37,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout
